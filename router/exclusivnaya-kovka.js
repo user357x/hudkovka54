@@ -1,5 +1,7 @@
 'use strict';
 
+const im = require('imagemagick');
+
 module.exports = (req, res, next) => co(function* () {
 
     const filename = __filename.split('/').reverse()[0].split('.')[0];

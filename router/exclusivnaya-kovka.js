@@ -24,6 +24,9 @@ module.exports = (req, res, next) => co(function* () {
         images.map(img => {
             return new Promise((resolve, reject) => {
                 im.identify(`${gallery_path}/${img}`, (err, features) => {
+
+                    console.log(gallery_path);
+
                     err ? reject(err) :
                         resolve({
                             width : features.width,

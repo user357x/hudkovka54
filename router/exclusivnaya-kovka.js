@@ -4,7 +4,7 @@ module.exports = (req, res, next) => co(function* () {
 
     const filename = __filename.split('/').reverse()[0].split('.')[0];
 
-    const gallery = yield co(getGallery(filename));
+    //const gallery = yield co(getGallery(filename));
 
     res.status(200).send(filename);
 

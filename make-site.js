@@ -1,11 +1,31 @@
 'use strict';
 
-const request = require(`superagent`);
+//const request = require(`superagent`);
 const co = require(`co`);
 const fs = require(`./lib/fs`);
 const config = require(`./config`);
 
 const xmlParser = require(`${__dirname}/lib/xmlParser`);
+
+const agent = require("superagent");
+
+const request = route => new Promise((resolve, reject) => {
+
+    console.log(route);
+
+    setTimeout(() => {
+        agent
+            .get(`${config.host}:${config.port}${route}`)
+            .end((err, res) => {
+                if(err) {
+                    reject(err);
+                }
+                else {
+                    resolve(res);
+                }
+            });
+    }, 3000);
+});
 
 co(function* () {
 
@@ -22,6 +42,13 @@ co(function* () {
 
     console.log(routes);
 
-    yield Promise.all(routes.map(route => request.get(`${config.host}:${config.port}${route}`)));
+    //yield Promise.all(routes.map(request));
+
+    for(let i = 0; i < routes.length; i++) {
+        yield request(routes[i]);
+    }
+
+
+
 
 }).catch(console.error);

@@ -23,10 +23,10 @@ module.exports = (req, res, next) => co(function* () {
     const gallery = yield Promise.all(
         images.map(img => {
             return new Promise((resolve, reject) => {
+
+                console.log(`${gallery_path}/${img}`);
+
                 im.identify(`${gallery_path}/${img}`, (err, features) => {
-
-                    console.log(gallery_path);
-
                     err ? reject(err) :
                         resolve({
                             width : features.width,

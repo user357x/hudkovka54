@@ -1,0 +1,9 @@
+<% menu_items.forEach(item => { %>
+<li>
+    <% if ('/' + block + '.html' === item.href || (block === 'home' && item.href === '/')) {  %>
+    <label><%-item.title -%></label>
+    <% } else { %>
+    <a href = "<%-item.href -%>"><%-item.title -%></a>
+    <% } %>
+</li>
+<% }); %>

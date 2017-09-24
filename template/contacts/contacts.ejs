@@ -1,0 +1,25 @@
+<div id="contacts">
+    <div id="map">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ac412b50afcde18e6b3b0b0bb5c58d25b9d4b76814c85bc977a5a36731c627e19&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+    <form name="feedback" action="javascript:new Myform().send()">
+        <div>
+            <div>
+                <label for="name">Ваше имя:</label>
+                <label for="email">Ваш e-mail:</label>
+                <label for="phone">Ваш телефон:</label>
+                <label for="message">Сообщение:</label>
+            </div>
+            <div>
+                <input id="name" type="text" name="name" />
+                <input id="email" type="text" name="email" />
+                <input id="phone" type="text" name="phone" />
+                <textarea id="message" name="message"></textarea>
+                <button>Отправить</button>
+            </div>
+        </div>
+        <div>
+            <span id="result"></span>
+        </div>
+    </form>
+</div>

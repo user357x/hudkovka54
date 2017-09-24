@@ -1,0 +1,13 @@
+<footer>
+    <nav>
+        <ul class="menu">
+            <%-partial('./menu_items.ejs')%>
+        </ul>
+    </nav>
+    <div id="copyright">
+        Все права защищены &copy; <i>"Художественная ковка"</i>
+    </div>
+</footer>
+<% scripts.forEach(script => { %>
+<script type="text/javascript" src="/js/<%-script -%>.js"></script>
+<% }); %>

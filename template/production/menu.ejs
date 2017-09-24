@@ -1,0 +1,10 @@
+<div id = "production">
+    <% products.forEach(product => { %>
+    <div>
+        <a href="<%-product.href -%>">
+            <b><i><%-product.title -%></i></b>
+            <img src = "<%-product.img -%>" alt = "<%-product.title -%>" />
+        </a>
+    </div>
+    <% }); %>
+</div>

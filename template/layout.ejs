@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <%-partial('./common/head')%>
+    <body>
+        <%-partial('./common/header')%>
+        <%-block === 'product' ? partial('./product/crumbs') : partial('./common/menu')%>
+        <main>
+            <%-partial('./'  + block + '/index.ejs')%>
+        </main>
+        <%-partial('./common/footer')%>
+    </body>
+</html>

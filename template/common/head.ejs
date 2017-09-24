@@ -1,0 +1,13 @@
+<head>
+    <title><%-title -%></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="<%-description -%>" />
+    <meta name="keywords" content="<%-keywords.join(', ') -%>" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name='yandex-verification' content='7c59914da94a71b7' />
+    <% styles.forEach(style => { %>
+    <link rel="stylesheet" href="/css/<%-style -%>.css" type="text/css" />
+    <% }); %>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+</head>

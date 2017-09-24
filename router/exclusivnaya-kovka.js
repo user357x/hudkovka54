@@ -18,11 +18,9 @@ module.exports = (req, res, next) => co(function* () {
 
     const items = yield fs.readDir(gallery_path);
 
-    console.log(items);
-
     const images = items.filter(img => img.split('.').length === 2);
 
-    return yield Promise.all(
+    const gallery = yield Promise.all(
         images.map(img => {
             return new Promise((resolve, reject) => {
                 im.identify(`${gallery_path}/${img}`, (err, features) => {
@@ -37,6 +35,8 @@ module.exports = (req, res, next) => co(function* () {
             })
         })
     );
+
+    console.log(gallery);
 
     res.status(200).send(filename);
 

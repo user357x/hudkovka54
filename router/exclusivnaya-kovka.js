@@ -8,7 +8,7 @@ module.exports = (req, res, next) => co(function* () {
 
     res.status(200).send(filename);
 
-    yield save(
+    /*yield save(
         res,
         {
             title : `Эксклюзив`,
@@ -39,7 +39,7 @@ module.exports = (req, res, next) => co(function* () {
             gallery: gallery
         },
         filename
-    );
+    );*/
 
 
 

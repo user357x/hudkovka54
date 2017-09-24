@@ -3,6 +3,7 @@
 const request = require(`superagent`);
 const co = require(`co`);
 const fs = require(`./lib/fs`);
+const config = require(`./config`);
 
 const xmlParser = require(`${__dirname}/lib/xmlParser`);
 
@@ -21,6 +22,6 @@ co(function* () {
 
     console.log(routes);
 
-    yield Promise.all(routes.map(route => request.get(`http://localhost:3000${route}`)));
+    yield Promise.all(routes.map(route => request.get(`${config.host}:${config.port}${route}`)));
 
 }).catch(console.error);

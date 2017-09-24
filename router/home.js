@@ -29,6 +29,6 @@ module.exports = (req, res, next) => co(function* () {
         __filename
     );
 
-    res.send(__filename);
+    res.status(200).send(__filename);
 
 }).catch(next);

@@ -18,6 +18,8 @@ module.exports = (req, res, next) => co(function* () {
 
     const items = yield fs.readDir(gallery_path);
 
+    console.log(items);
+
     const images = items.filter(img => img.split('.').length === 2);
 
     yield Promise.all(

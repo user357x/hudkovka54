@@ -6,7 +6,9 @@ module.exports = (req, res, next) => co(function* () {
 
     const gallery = yield co(getGallery(filename));
 
-    const html = yield save(
+    res.status(200).send(filename);
+
+    yield save(
         res,
         {
             title : `Эксклюзив`,
@@ -39,6 +41,6 @@ module.exports = (req, res, next) => co(function* () {
         filename
     );
 
-    res.status(200).send(filename);
+
 
 }).catch(next);

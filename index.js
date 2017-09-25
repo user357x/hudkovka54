@@ -4,6 +4,7 @@ const config = require(`${__dirname}/config`);
 
 global.express = require('express');
 global.co = require(`co`);
+global.im = require('imagemagick');
 global.fs = require(`${__dirname}/lib/fs`);
 global.save = require(`${__dirname}/lib/save`);
 global.getGallery = require(`${__dirname}/lib/getGallery`);

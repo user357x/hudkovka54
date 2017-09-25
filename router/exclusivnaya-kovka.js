@@ -1,7 +1,5 @@
 'use strict';
 
-const im = require('imagemagick');
-
 module.exports = (req, res, next) => co(function* () {
 
     const filename = __filename.split('/').reverse()[0].split('.')[0];
@@ -41,9 +39,7 @@ module.exports = (req, res, next) => co(function* () {
 
     console.log(gallery);
 
-    res.status(200).send(filename);
-
-    /*yield save(
+    yield save(
         res,
         {
             title : `Эксклюзив`,
@@ -74,8 +70,8 @@ module.exports = (req, res, next) => co(function* () {
             gallery: gallery
         },
         filename
-    );*/
+    );
 
-
+    res.status(200).send(filename);
 
 }).catch(next);

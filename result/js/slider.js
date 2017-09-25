@@ -4,7 +4,7 @@ function Slider(selector) {
 
     var self = this,
         i = 0,
-        interval = 1000,
+        interval = 3000,
         images = hkSlider,
         block = document.querySelector(selector);
 
@@ -19,4 +19,4 @@ function Slider(selector) {
 
 }
 
-//new Slider('#slider').start();
+new Slider('#slider').start();

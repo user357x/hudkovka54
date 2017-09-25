@@ -32,7 +32,7 @@ co(function* () {
     let routes;
 
     if(process.argv.length > 2) {
-        routes = process.argv.slice(2).map(route => `/${route}`);
+        routes = process.argv.slice(2).map(route => `${route}`);
     }
     else {
         const siteMapXml = yield fs.readFile(`${__dirname}/result/sitemap.xml`);

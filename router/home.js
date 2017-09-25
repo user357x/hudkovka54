@@ -12,7 +12,8 @@ module.exports = (req, res, next) => co(function* () {
             keywords : [
                 'художественная ковка',
                 'ковка',
-                'кованые изделя'
+                'художественная ковка фото',
+                'ковка фото'
             ],
             scripts: ['slider'],
             block : 'home',

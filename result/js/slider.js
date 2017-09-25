@@ -9,6 +9,11 @@ function Slider(selector) {
         block = document.querySelector(selector);
 
     this.start = function () {
+
+        images.forEach(function (img) {
+            new Image().src = "../img/slider/" + img;
+        });
+
         setTimeout(function next() {
             console.log(images[i]);
             block.style.backgroundImage = "url('../img/slider/" + images[i] + "')";

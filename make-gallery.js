@@ -13,15 +13,21 @@ co(function* () {
 
     const map = yield xmlParser(siteMapXml);
 
+
+
     const urls = map.urlset.url;
 
     let filename;
 
     for(let i = 0; i < urls.length; i++) {
 
-        filename = urls[0].loc[0].split('hudkovka54.ru')[1].split('.')[0];
+        console.log(urls[i]);
+
+        filename = urls[i].loc[0].split('hudkovka54.ru')[1].split('.')[0];
 
         const gallery_src = `/img/gallery/${filename}`;
+
+        console.log(`/img/gallery/${filename}`)
 
         const gallery_path = `${config.result_path}${gallery_src}`;
 

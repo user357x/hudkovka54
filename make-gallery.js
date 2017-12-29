@@ -27,7 +27,7 @@ co(function* () {
 
         const gallery_src = `/img/gallery/${filename}`;
 
-        console.log(`/img/gallery/${filename}`)
+        console.log(`/img/gallery/${filename}`);
 
         const gallery_path = `${config.result_path}${gallery_src}`;
 

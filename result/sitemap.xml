@@ -4,7 +4,7 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-    <url>
+    <!--<url>
         <loc>http://hudkovka54.ru</loc>
     </url>
     <url>
@@ -33,11 +33,11 @@
     </url>
     <url>
         <loc>http://hudkovka54.ru/kovanye-vorota.html</loc>
-    </url>
+    </url>-->
     <url>
         <loc>http://hudkovka54.ru/kovanaya-mebel.html</loc>
     </url>
-    <url>
+    <!--<url>
         <loc>http://hudkovka54.ru/kovanye-perila.html</loc>
     </url>
     <url>
@@ -45,5 +45,5 @@
     </url>
     <url>
         <loc>http://hudkovka54.ru/kovanaya-chasovnja.html</loc>
-    </url>
+    </url>-->
 </urlset>
